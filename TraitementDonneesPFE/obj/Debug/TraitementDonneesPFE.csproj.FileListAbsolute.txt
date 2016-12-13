@@ -1,0 +1,9 @@
+D:\Dropbox\ENSC 3A\PFE\TraitementDonneesPFE\TraitementDonneesPFE\bin\Debug\TraitementDonneesPFE.exe.config
+D:\Dropbox\ENSC 3A\PFE\TraitementDonneesPFE\TraitementDonneesPFE\bin\Debug\TraitementDonneesPFE.exe
+D:\Dropbox\ENSC 3A\PFE\TraitementDonneesPFE\TraitementDonneesPFE\bin\Debug\TraitementDonneesPFE.pdb
+D:\Dropbox\ENSC 3A\PFE\TraitementDonneesPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.csprojResolveAssemblyReference.cache
+D:\Dropbox\ENSC 3A\PFE\TraitementDonneesPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.PFE_StabilisationCockpit.resources
+D:\Dropbox\ENSC 3A\PFE\TraitementDonneesPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.Properties.Resources.resources
+D:\Dropbox\ENSC 3A\PFE\TraitementDonneesPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.csproj.GenerateResource.Cache
+D:\Dropbox\ENSC 3A\PFE\TraitementDonneesPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.exe
+D:\Dropbox\ENSC 3A\PFE\TraitementDonneesPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.pdb
