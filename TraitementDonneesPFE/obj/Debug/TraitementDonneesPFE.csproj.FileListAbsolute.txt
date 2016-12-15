@@ -7,3 +7,12 @@ D:\Dropbox\ENSC 3A\PFE\TraitementDonneesPFE\TraitementDonneesPFE\obj\Debug\Trait
 D:\Dropbox\ENSC 3A\PFE\TraitementDonneesPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.csproj.GenerateResource.Cache
 D:\Dropbox\ENSC 3A\PFE\TraitementDonneesPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.exe
 D:\Dropbox\ENSC 3A\PFE\TraitementDonneesPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.pdb
+C:\Users\Arnaud\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\bin\Debug\TraitementDonneesPFE.exe.config
+C:\Users\Arnaud\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.exe
+C:\Users\Arnaud\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.pdb
+C:\Users\Arnaud\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.csprojResolveAssemblyReference.cache
+C:\Users\Arnaud\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.PFE_StabilisationCockpit.resources
+C:\Users\Arnaud\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.Properties.Resources.resources
+C:\Users\Arnaud\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.csproj.GenerateResource.Cache
+C:\Users\Arnaud\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\bin\Debug\TraitementDonneesPFE.exe
+C:\Users\Arnaud\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\bin\Debug\TraitementDonneesPFE.pdb
