@@ -23,8 +23,9 @@ namespace TraitementDonneesPFE
         public int _taille;
         public int _haut_corps;
         public int _poids;
+        public List<resultat> _resultats;
 
-        public sujet (int id, int scenario, int sexe, int age, int main, int couleur,int accuite, int oeil_dir, int lunettes, int pb, int taille, int haut_corps,int poids)
+        public sujet (int id, int scenario, int sexe, int age, int main, int couleur,int accuite, int oeil_dir, int lunettes, int pb, int taille, int haut_corps,int poids, List<resultat> resultats)
         {
 
             _id = id;
@@ -40,7 +41,19 @@ namespace TraitementDonneesPFE
             _taille = taille;
             _haut_corps = haut_corps;
             _poids = poids;
+            _resultats = resultats;
                 
+        }
+        public List<resultat> Resultats
+        {
+            get
+            {
+                return _resultats;
+            }
+            set
+            {
+                _resultats = value;
+            }
         }
 
         public int Id
