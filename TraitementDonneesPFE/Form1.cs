@@ -28,7 +28,11 @@ namespace TraitementDonneesPFE
             
 
     }
-
+        /*
+          #-----------------------------#
+          # Fonction btn "tout" sujet---#
+          #-----------------------------#
+         */
         private void Tout_Click(object sender, EventArgs e)
         {
             int cpt1 = 0;
@@ -45,6 +49,7 @@ namespace TraitementDonneesPFE
                     if (cpt1==27)
                     {
                         break;
+
                     }
                 }
                 Tout.Text = "Supprimer filtre";
@@ -65,7 +70,11 @@ namespace TraitementDonneesPFE
             
         }
 
-
+        /*
+          #-----------------------------#
+          # Fonction read file csv sujet#
+          #-----------------------------#
+         */
         public static void readfile()
         {
             var reader = new StreamReader(File.OpenRead(@".\sujets.csv"), Encoding.Default);
@@ -506,7 +515,47 @@ namespace TraitementDonneesPFE
             }
         }
 
-#endregion
+        #endregion
 
+        /*
+          #-----------------------------#
+          # Fonction btn "toutes" cibles#
+          #-----------------------------#
+         */
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int cpt1 = 0;
+            int cpt2 = 0;
+            Debug.WriteLine("nb checkbox" + " ");
+            if (button1.Text == "Toutes")
+            {
+
+                foreach (CheckBox c in groupBox2.Controls)
+                {
+                    //Debug.WriteLine("nb foreach check tous : "+ " " + cpt1);
+                    c.Checked = true;
+                    cpt1++;
+                    if (cpt1 == 25)
+                    {
+                        break;
+                    }
+                }
+                button1.Text = "Supprimer filtre";
+            }
+            else
+            {
+                foreach (CheckBox c in groupBox2.Controls)
+                {
+                    c.Checked = false;
+                    cpt2++;
+                    if (cpt2 == 25)
+                    {
+                        break;
+                    }
+                }
+                button1.Text = "Toutes";
+            }
+        }
     }
 }
