@@ -94,6 +94,9 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.groupBox_Sexe = new System.Windows.Forms.GroupBox();
+            this.checkBox_Sexe_Masc = new System.Windows.Forms.CheckBox();
+            this.checkBox_Sexe_Femin = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -101,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox4.SuspendLayout();
+            this.groupBox_Sexe.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -942,11 +946,45 @@
             this.radioButton1.Text = "Sans mouvements";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // groupBox_Sexe
+            // 
+            this.groupBox_Sexe.Controls.Add(this.checkBox_Sexe_Femin);
+            this.groupBox_Sexe.Controls.Add(this.checkBox_Sexe_Masc);
+            this.groupBox_Sexe.Location = new System.Drawing.Point(9, 498);
+            this.groupBox_Sexe.Name = "groupBox_Sexe";
+            this.groupBox_Sexe.Size = new System.Drawing.Size(195, 32);
+            this.groupBox_Sexe.TabIndex = 3;
+            this.groupBox_Sexe.TabStop = false;
+            this.groupBox_Sexe.Text = "Sexe";
+            // 
+            // checkBox_Sexe_Masc
+            // 
+            this.checkBox_Sexe_Masc.AutoSize = true;
+            this.checkBox_Sexe_Masc.Location = new System.Drawing.Point(10, 13);
+            this.checkBox_Sexe_Masc.Name = "checkBox_Sexe_Masc";
+            this.checkBox_Sexe_Masc.Size = new System.Drawing.Size(62, 17);
+            this.checkBox_Sexe_Masc.TabIndex = 0;
+            this.checkBox_Sexe_Masc.Text = "Homme";
+            this.checkBox_Sexe_Masc.UseVisualStyleBackColor = true;
+            this.checkBox_Sexe_Masc.CheckedChanged += new System.EventHandler(this.checkBox_Sexe_Masc_CheckedChanged);
+            // 
+            // checkBox_Sexe_Femin
+            // 
+            this.checkBox_Sexe_Femin.AutoSize = true;
+            this.checkBox_Sexe_Femin.Location = new System.Drawing.Point(96, 13);
+            this.checkBox_Sexe_Femin.Name = "checkBox_Sexe_Femin";
+            this.checkBox_Sexe_Femin.Size = new System.Drawing.Size(60, 17);
+            this.checkBox_Sexe_Femin.TabIndex = 1;
+            this.checkBox_Sexe_Femin.Text = "Femme";
+            this.checkBox_Sexe_Femin.UseVisualStyleBackColor = true;
+            this.checkBox_Sexe_Femin.CheckedChanged += new System.EventHandler(this.checkBox_Sexe_Femin_CheckedChanged);
+            // 
             // PFE_StabilisationCockpit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1306, 681);
+            this.Controls.Add(this.groupBox_Sexe);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
@@ -968,6 +1006,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox_Sexe.ResumeLayout(false);
+            this.groupBox_Sexe.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1040,6 +1080,9 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox groupBox_Sexe;
+        private System.Windows.Forms.CheckBox checkBox_Sexe_Femin;
+        private System.Windows.Forms.CheckBox checkBox_Sexe_Masc;
     }
 }
 
