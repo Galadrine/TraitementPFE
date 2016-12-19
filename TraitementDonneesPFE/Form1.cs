@@ -19,6 +19,7 @@ namespace TraitementDonneesPFE
     {
        private static List<sujet> mesSujets = new List<sujet>();
        private static List<int> L_sujetsChecked = new List<int>();
+       private static List<int> L_ciblesChecked = new List<int>();
        private static List<CheckBox> L_checkBox_sujets = new List<CheckBox>();
 
         public PFE_StabilisationCockpit()
@@ -555,6 +556,357 @@ namespace TraitementDonneesPFE
                     }
                 }
                 button1.Text = "Toutes";
+            }
+        }
+
+        private void checkBox32_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(25))
+            {
+                L_sujetsChecked.Remove(25);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(25);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox59_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(2))
+            {
+                L_sujetsChecked.Remove(2);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(2);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox48_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(3))
+            {
+                L_sujetsChecked.Remove(3);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(3);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox42_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(4))
+            {
+                L_sujetsChecked.Remove(4);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(4);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox36_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(5))
+            {
+                L_sujetsChecked.Remove(5);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(5);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox58_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(6))
+            {
+                L_sujetsChecked.Remove(6);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(6);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox57_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(7))
+            {
+                L_sujetsChecked.Remove(7);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(7);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox41_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(9))
+            {
+                L_sujetsChecked.Remove(9);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(9);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox47_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(8))
+            {
+                L_sujetsChecked.Remove(8);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(8);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox35_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(10))
+            {
+                L_sujetsChecked.Remove(10);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(10);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox56_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(11))
+            {
+                L_sujetsChecked.Remove(11);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(11);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox55_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(12))
+            {
+                L_sujetsChecked.Remove(12);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(12);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox60_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(1))
+            {
+                L_sujetsChecked.Remove(1);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(1);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox40_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(14))
+            {
+                L_sujetsChecked.Remove(14);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(14);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox34_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(15))
+            {
+                L_sujetsChecked.Remove(15);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(15);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox33_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(20))
+            {
+                L_sujetsChecked.Remove(20);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(20);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox39_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(19))
+            {
+                L_sujetsChecked.Remove(19);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(19);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox45_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(18))
+            {
+                L_sujetsChecked.Remove(18);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(18);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox53_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(17))
+            {
+                L_sujetsChecked.Remove(17);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(17);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox54_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(16))
+            {
+                L_sujetsChecked.Remove(16);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(16);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox52_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(21))
+            {
+                L_sujetsChecked.Remove(21);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(21);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox51_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (L_sujetsChecked.Contains(22))
+            {
+                L_sujetsChecked.Remove(22);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(22);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox44_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(23))
+            {
+                L_sujetsChecked.Remove(23);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(23);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox38_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(24))
+            {
+                L_sujetsChecked.Remove(24);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(24);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
+            }
+        }
+
+        private void checkBox46_CheckedChanged(object sender, EventArgs e)
+        {
+            if (L_sujetsChecked.Contains(25))
+            {
+                L_sujetsChecked.Remove(25);
+                Debug.WriteLine("nb clibles checked : " + L_ciblesChecked.Count());
+            }
+            else
+            {
+                L_sujetsChecked.Add(25);
+                Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
             }
         }
     }
