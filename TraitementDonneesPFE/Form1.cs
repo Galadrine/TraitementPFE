@@ -31,13 +31,21 @@ namespace TraitementDonneesPFE
 
         private void Tout_Click(object sender, EventArgs e)
         {
+            int cpt1 = 0;
+            int cpt2 = 0;
             Debug.WriteLine("nb checkbox" + " ");
             if (Tout.Text == "Tous")
             {
                
                 foreach (CheckBox c in groupBox1.Controls)
                 {
+                    //Debug.WriteLine("nb foreach check tous : "+ " " + cpt1);
                     c.Checked = true;
+                    cpt1++;
+                    if (cpt1==27)
+                    {
+                        break;
+                    }
                 }
                 Tout.Text = "Supprimer filtre";
             }
@@ -46,6 +54,11 @@ namespace TraitementDonneesPFE
                 foreach (CheckBox c in groupBox1.Controls)
                 {
                     c.Checked = false;
+                    cpt2++;
+                    if (cpt2 == 27)
+                    {
+                        break;
+                    }
                 }
                 Tout.Text = "Tous";
             }
