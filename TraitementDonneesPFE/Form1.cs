@@ -928,7 +928,7 @@ namespace TraitementDonneesPFE
         private void checkBox_Sexe_Masc_CheckedChanged(object sender, EventArgs e)
         {
             int cpt = 0;
-
+            List<int> L_num_suj_masc = new List<int>();
             sexe = true;
             //Supp List sujets selectionnes
             for (int num = 0; num < L_sujetsChecked.Count(); num++)
@@ -936,42 +936,56 @@ namespace TraitementDonneesPFE
                 L_sujetsChecked.Remove(L_sujetsChecked[num]);
             }
 
-           //Debug.WriteLine(checkBox_Sexe_Masc.Checked + " check sexe masc");
+            //Uncheck all checkbox
+            foreach (CheckBox c in groupBox1.Controls)
+            {
+                cpt++;
+               
+                    c.Checked = false;
+
+                if (cpt == 27)
+                {
+                    break;
+                }
+            }
+
+            //Debug.WriteLine(checkBox_Sexe_Masc.Checked + " check sexe masc");
 
             if (checkBox_Sexe_Masc.Checked)
             {
                 foreach (sujet suj in mesSujets)
                 {
-                     if(suj.Sexe==1)
+                    if (suj.Sexe == 1)
                     {
-                        L_sujetsChecked.Add(suj.Id);
+                        L_num_suj_masc.Add(suj.Id);
                     }
                     //Debug.WriteLine("nb L_sujet Checkt count : sexe homme : " + L_sujetsChecked.Count());
-                }
 
-                //Debug.WriteLine("bool sexe : " + sexe);
-                    for (int i = 0; i < L_sujetsChecked.Count(); i++)
+                    for (int i = 0; i < L_num_suj_masc.Count(); i++)
                     {
                         cpt = 0;
                         foreach (CheckBox c in groupBox1.Controls)
                         {
                             cpt++;
-                            if (c.Text == L_sujetsChecked[i].ToString())
+                            if (c.Text == L_num_suj_masc[i].ToString())
                             {
-                            int num2 = L_sujetsChecked[i];
-                            c.Checked = true;
-                                                        
+
+                                c.Checked = true;
+
                             }
-                            else
-                        {
-                            c.Checked = false;
-                        }
+                            
                             if (cpt == 27)
                             {
                                 break;
                             }
                         }
+
                     }
+                }
+
+                //Debug.WriteLine("bool sexe : " + sexe);
+                   
+                    
                    
                 
             }
