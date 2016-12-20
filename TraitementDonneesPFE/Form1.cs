@@ -21,7 +21,7 @@ namespace TraitementDonneesPFE
         private static List<int> L_sujetsChecked = new List<int>();
         private static List<int> L_ciblesChecked = new List<int>();
         private static List<CheckBox> L_checkBox_sujets = new List<CheckBox>();
-        private static bool sexe=false;
+        
         
 
         public PFE_StabilisationCockpit()
@@ -308,8 +308,7 @@ namespace TraitementDonneesPFE
 
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
-            if( !sexe)
-            {
+            
                 if (L_sujetsChecked.Contains(11))
                 {
                     L_sujetsChecked.Remove(11);
@@ -320,7 +319,7 @@ namespace TraitementDonneesPFE
                     L_sujetsChecked.Add(11);
                     Debug.WriteLine("nb sujets checked : " + L_sujetsChecked.Count());
                 }
-            }
+            
            
         }
 
@@ -929,14 +928,14 @@ namespace TraitementDonneesPFE
         {
             int cpt = 0;
             List<int> L_num_suj_masc = new List<int>();
-            sexe = true;
+            
             //Supp List sujets selectionnes
             for (int num = 0; num < L_sujetsChecked.Count(); num++)
             {
                 L_sujetsChecked.Remove(L_sujetsChecked[num]);
             }
 
-            //Uncheck all checkbox
+            //Uncheck all checkbox sujets
             foreach (CheckBox c in groupBox1.Controls)
             {
                 cpt++;
@@ -947,12 +946,21 @@ namespace TraitementDonneesPFE
                 {
                     break;
                 }
+
             }
+
+            //Uncheck femme check box
+
+           
+                
+                
+            
 
             //Debug.WriteLine(checkBox_Sexe_Masc.Checked + " check sexe masc");
 
             if (checkBox_Sexe_Masc.Checked)
             {
+                checkBox_Sexe_Femin.Checked = false;
                 foreach (sujet suj in mesSujets)
                 {
                     if (suj.Sexe == 1)
@@ -981,35 +989,72 @@ namespace TraitementDonneesPFE
                         }
 
                     }
-                }
-
-                //Debug.WriteLine("bool sexe : " + sexe);
-                   
-                    
-                   
-                
+                }    
             }
-            else
-            {
-               /* foreach (CheckBox c in groupBox1.Controls)
-                {
-                    cpt++;
-                    if (c.Checked == true)
-                    {
-                        c.Checked = false;
-                    }
-                   
-                    if (cpt == 27)
-                    {
-                        break;
-                    }
-                }
-                */
-            }
+           
         }
 
         private void checkBox_Sexe_Femin_CheckedChanged(object sender, EventArgs e)
         {
+            int cpt = 0;
+            List<int> L_num_suj_fem = new List<int>();
+
+            //Supp List sujets selectionnes
+            for (int num = 0; num < L_sujetsChecked.Count(); num++)
+            {
+                L_sujetsChecked.Remove(L_sujetsChecked[num]);
+            }
+
+            //Uncheck all checkbox
+            foreach (CheckBox c in groupBox1.Controls)
+            {
+                cpt++;
+
+                c.Checked = false;
+
+                if (cpt == 27)
+                {
+                    break;
+                }
+            }
+
+            //Uncheck mas check box
+
+            
+
+            if (checkBox_Sexe_Femin.Checked)
+            {
+                checkBox_Sexe_Masc.Checked = false;
+                foreach (sujet suj in mesSujets)
+                {
+                    if (suj.Sexe == 2)
+                    {
+                        L_num_suj_fem.Add(suj.Id);
+                    }
+                    //Debug.WriteLine("nb L_sujet Checkt count : sexe femme : " + L_sujetsChecked.Count());
+
+                    for (int i = 0; i < L_num_suj_fem.Count(); i++)
+                    {
+                        cpt = 0;
+                        foreach (CheckBox c in groupBox1.Controls)
+                        {
+                            cpt++;
+                            if (c.Text == L_num_suj_fem[i].ToString())
+                            {
+
+                                c.Checked = true;
+
+                            }
+
+                            if (cpt == 27)
+                            {
+                                break;
+                            }
+                        }
+
+                    }
+                }
+            }
 
         }
     }
