@@ -9,7 +9,8 @@ namespace TraitementDonneesPFE
     class sujet
     {
 
-        // attributs 
+        #region Attributs
+
         public int _id;
         public int _scenario;
         public int _sexe;
@@ -24,6 +25,10 @@ namespace TraitementDonneesPFE
         public int _haut_corps;
         public int _poids;
         public List<resultat> _resultats;
+
+        #endregion
+
+        #region Constructeur
 
         public sujet (int id, int scenario, int sexe, int age, int main, int couleur,int accuite, int oeil_dir, int lunettes, int pb, int taille, int haut_corps,int poids, List<resultat> resultats)
         {
@@ -44,6 +49,12 @@ namespace TraitementDonneesPFE
             _resultats = resultats;
                 
         }
+
+        #endregion
+
+
+        #region Accesseurs
+
         public List<resultat> Resultats
         {
             get
@@ -221,6 +232,9 @@ namespace TraitementDonneesPFE
                 _poids = value;
             }
         }
+
+        #endregion
+
 
 
 

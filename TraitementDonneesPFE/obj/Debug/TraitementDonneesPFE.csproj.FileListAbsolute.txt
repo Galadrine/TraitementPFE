@@ -16,3 +16,12 @@ C:\Users\Arnaud\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\Tr
 C:\Users\Arnaud\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.csproj.GenerateResource.Cache
 C:\Users\Arnaud\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\bin\Debug\TraitementDonneesPFE.exe
 C:\Users\Arnaud\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\bin\Debug\TraitementDonneesPFE.pdb
+C:\Users\alexb\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\bin\Debug\TraitementDonneesPFE.exe.config
+C:\Users\alexb\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.exe
+C:\Users\alexb\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.pdb
+C:\Users\alexb\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\bin\Debug\TraitementDonneesPFE.exe
+C:\Users\alexb\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\bin\Debug\TraitementDonneesPFE.pdb
+C:\Users\alexb\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.csprojResolveAssemblyReference.cache
+C:\Users\alexb\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.PFE_StabilisationCockpit.resources
+C:\Users\alexb\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.Properties.Resources.resources
+C:\Users\alexb\Documents\GitHub\TraitementPFE\TraitementDonneesPFE\obj\Debug\TraitementDonneesPFE.csproj.GenerateResource.Cache
