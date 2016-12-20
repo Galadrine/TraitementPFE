@@ -939,8 +939,8 @@ namespace TraitementDonneesPFE
             foreach (CheckBox c in groupBox1.Controls)
             {
                 cpt++;
-               
-                    c.Checked = false;
+                c.ForeColor = System.Drawing.Color.Black;
+                c.Checked = false;
 
                 if (cpt == 27)
                 {
@@ -949,7 +949,7 @@ namespace TraitementDonneesPFE
 
             }
 
-            //Uncheck femme check box
+         
 
            
                 
@@ -979,9 +979,10 @@ namespace TraitementDonneesPFE
                             {
 
                                 c.Checked = true;
-
+                                c.ForeColor = System.Drawing.Color.DarkGray;
                             }
                             
+
                             if (cpt == 27)
                             {
                                 break;
@@ -1011,14 +1012,14 @@ namespace TraitementDonneesPFE
                 cpt++;
 
                 c.Checked = false;
-
+                c.ForeColor = System.Drawing.Color.Black;
                 if (cpt == 27)
                 {
                     break;
                 }
             }
 
-            //Uncheck mas check box
+        
 
             
 
@@ -1043,8 +1044,9 @@ namespace TraitementDonneesPFE
                             {
 
                                 c.Checked = true;
-
+                                c.ForeColor = System.Drawing.Color.DarkGray;
                             }
+                           
 
                             if (cpt == 27)
                             {
