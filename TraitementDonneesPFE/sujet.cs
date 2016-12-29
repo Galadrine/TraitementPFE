@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TraitementDonneesPFE
 {
-    class sujet
+    class Sujet
     {
 
         #region Attributs
@@ -26,11 +26,12 @@ namespace TraitementDonneesPFE
         public int _poids;
         public List<resultat> _resultats;
 
+
         #endregion
 
         #region Constructeur
 
-        public sujet (int id, int scenario, int sexe, int age, int main, int couleur,int accuite, int oeil_dir, int lunettes, int pb, int taille, int haut_corps,int poids, List<resultat> resultats)
+        public Sujet (int id, int scenario, int sexe, int age, int main, int couleur,int accuite, int oeil_dir, int lunettes, int pb, int taille, int haut_corps,int poids, List<resultat> resultats)
         {
 
             _id = id;
