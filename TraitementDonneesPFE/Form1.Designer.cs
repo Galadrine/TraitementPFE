@@ -113,6 +113,7 @@
             this.comboBoxOrdreScenario = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxScenario = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDraw)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -491,7 +492,7 @@
             this.Tout.Name = "Tout";
             this.Tout.Size = new System.Drawing.Size(172, 23);
             this.Tout.TabIndex = 0;
-            this.Tout.Text = "Tous";
+            this.Tout.Text = "Supprimer filtre";
             this.Tout.UseVisualStyleBackColor = true;
             this.Tout.Click += new System.EventHandler(this.TousSujets_Click);
             // 
@@ -503,11 +504,11 @@
             this.groupBox2.Controls.Add(this.checkBox35);
             this.groupBox2.Controls.Add(this.checkBox36);
             this.groupBox2.Controls.Add(this.checkBox38);
+            this.groupBox2.Controls.Add(this.checkBox44);
             this.groupBox2.Controls.Add(this.checkBox39);
             this.groupBox2.Controls.Add(this.checkBox40);
             this.groupBox2.Controls.Add(this.checkBox41);
             this.groupBox2.Controls.Add(this.checkBox42);
-            this.groupBox2.Controls.Add(this.checkBox44);
             this.groupBox2.Controls.Add(this.checkBox45);
             this.groupBox2.Controls.Add(this.checkBox46);
             this.groupBox2.Controls.Add(this.checkBox47);
@@ -595,12 +596,12 @@
             // checkBox38
             // 
             this.checkBox38.AutoSize = true;
-            this.checkBox38.Location = new System.Drawing.Point(118, 129);
+            this.checkBox38.Location = new System.Drawing.Point(83, 129);
             this.checkBox38.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox38.Name = "checkBox38";
             this.checkBox38.Size = new System.Drawing.Size(38, 17);
             this.checkBox38.TabIndex = 1;
-            this.checkBox38.Text = "24";
+            this.checkBox38.Text = "23";
             this.checkBox38.UseVisualStyleBackColor = true;
             this.checkBox38.CheckedChanged += new System.EventHandler(this.checkBox38_CheckedChanged);
             // 
@@ -643,24 +644,24 @@
             // checkBox42
             // 
             this.checkBox42.AutoSize = true;
-            this.checkBox42.Location = new System.Drawing.Point(118, 44);
+            this.checkBox42.Location = new System.Drawing.Point(46, 44);
             this.checkBox42.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox42.Name = "checkBox42";
             this.checkBox42.Size = new System.Drawing.Size(32, 17);
             this.checkBox42.TabIndex = 1;
-            this.checkBox42.Text = "4";
+            this.checkBox42.Text = "2";
             this.checkBox42.UseVisualStyleBackColor = true;
             this.checkBox42.CheckedChanged += new System.EventHandler(this.checkBox42_CheckedChanged);
             // 
             // checkBox44
             // 
             this.checkBox44.AutoSize = true;
-            this.checkBox44.Location = new System.Drawing.Point(83, 128);
+            this.checkBox44.Location = new System.Drawing.Point(118, 129);
             this.checkBox44.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox44.Name = "checkBox44";
             this.checkBox44.Size = new System.Drawing.Size(38, 17);
             this.checkBox44.TabIndex = 1;
-            this.checkBox44.Text = "23";
+            this.checkBox44.Text = "24";
             this.checkBox44.UseVisualStyleBackColor = true;
             this.checkBox44.CheckedChanged += new System.EventHandler(this.checkBox44_CheckedChanged);
             // 
@@ -703,12 +704,12 @@
             // checkBox48
             // 
             this.checkBox48.AutoSize = true;
-            this.checkBox48.Location = new System.Drawing.Point(83, 44);
+            this.checkBox48.Location = new System.Drawing.Point(118, 44);
             this.checkBox48.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox48.Name = "checkBox48";
             this.checkBox48.Size = new System.Drawing.Size(32, 17);
             this.checkBox48.TabIndex = 1;
-            this.checkBox48.Text = "3";
+            this.checkBox48.Text = "4";
             this.checkBox48.UseVisualStyleBackColor = true;
             this.checkBox48.CheckedChanged += new System.EventHandler(this.checkBox48_CheckedChanged);
             // 
@@ -811,12 +812,12 @@
             // checkBox59
             // 
             this.checkBox59.AutoSize = true;
-            this.checkBox59.Location = new System.Drawing.Point(47, 44);
+            this.checkBox59.Location = new System.Drawing.Point(82, 44);
             this.checkBox59.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox59.Name = "checkBox59";
             this.checkBox59.Size = new System.Drawing.Size(32, 17);
             this.checkBox59.TabIndex = 1;
-            this.checkBox59.Text = "2";
+            this.checkBox59.Text = "3";
             this.checkBox59.UseVisualStyleBackColor = true;
             this.checkBox59.CheckedChanged += new System.EventHandler(this.checkBox59_CheckedChanged);
             // 
@@ -881,7 +882,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.pictureBox3.Location = new System.Drawing.Point(4, 58);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
@@ -891,7 +892,8 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pictureBox2.Image = global::TraitementDonneesPFE.Properties.Resources.Sans_titre_1;
             this.pictureBox2.Location = new System.Drawing.Point(5, 26);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
@@ -1210,6 +1212,18 @@
             this.comboBoxScenario.TabIndex = 3;
             this.comboBoxScenario.SelectedValueChanged += new System.EventHandler(this.ChangementScenario);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(27, 593);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(172, 57);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Afficher les positions";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.dessinerTousLesCercles);
+            // 
             // PFE_StabilisationCockpit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1220,6 +1234,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBoxDraw);
+            this.Controls.Add(this.button2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -1329,6 +1344,7 @@
         private System.Windows.Forms.ComboBox comboBoxScenario;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBoxSexe;
+        private System.Windows.Forms.Button button2;
     }
 }
 

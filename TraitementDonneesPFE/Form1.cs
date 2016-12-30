@@ -24,6 +24,7 @@ namespace TraitementDonneesPFE
         private static List<int> L_sujetsChecked = new List<int>();
         private static List<int> L_ciblesChecked = new List<int>();
         private static List<CheckBox> L_checkBox_sujets = new List<CheckBox>();
+        private List<List<int>> L_positionsET = new List<List<int>>();
         private int acuiteSelectionne =0, correctionSelectionne = 0, couleurYeuxSelectionne = 0, mainSelectionne = 0,
             oeilSelectionne = 0, ordreScenarioSelectionne = 0, sexeSelectionne = 0, scenarioSelectionne = 0;
         private string poidsSelectionne = "", tailleSelectionne = "", tailleHautSelectionne = "";
@@ -48,7 +49,43 @@ namespace TraitementDonneesPFE
             comboBoxTailleHaut.SelectedIndex = 0;
             comboBoxSexe.SelectedIndex = 0;
 
-            dessinerCercle(50, 50);
+
+            Image i = pictureBoxDraw.Image;
+            using (Graphics g = Graphics.FromImage(i))
+            {
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(72 * 0.5625 + 110), (int)(72 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(480 * 0.5625 + 110), (int)(72 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(960 * 0.5625 + 110), (int)(72 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(1440 * 0.5625 + 110), (int)(72 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(1848 * 0.5625 + 110), (int)(72 * 0.5625 + 61), 8, 8));
+
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(72 * 0.5625 + 110), (int)(310 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(480 * 0.5625 + 110), (int)(310 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(960 * 0.5625 + 110), (int)(310 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(1440 * 0.5625 + 110), (int)(310 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(1848 * 0.5625 + 110), (int)(310 * 0.5625 + 61), 8, 8));
+
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(72 * 0.5625 + 110), (int)(773 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(480 * 0.5625 + 110), (int)(773 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(960 * 0.5625 + 110), (int)(773 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(1440 * 0.5625 + 110), (int)(773 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(1848 * 0.5625 + 110), (int)(773 * 0.5625 + 61), 8, 8));
+
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(72 * 0.5625 + 110), (int)(1008 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(480 * 0.5625 + 110), (int)(1008 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(960 * 0.5625 + 110), (int)(1008 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(1440 * 0.5625 + 110), (int)(1008 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(1848 * 0.5625 + 110), (int)(1008 * 0.5625 + 61), 8, 8));
+
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(72 * 0.5625 + 110), (int)(540 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(480 * 0.5625 + 110), (int)(540 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(960 * 0.5625 + 110), (int)(540 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(1440 * 0.5625 + 110), (int)(540 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle((int)(1848 * 0.5625 + 110), (int)(540 * 0.5625 + 61), 8, 8));
+
+                pictureBoxDraw.Refresh();
+            }
+
 
         }
 
@@ -441,7 +478,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(25);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
 
             }
         }
@@ -457,7 +494,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(2);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -472,7 +509,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(3);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
 
             }
         }
@@ -488,7 +525,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(4);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
 
             }
         }
@@ -504,7 +541,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(5);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
 
             }
         }
@@ -520,7 +557,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(6);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
 
             }
         }
@@ -536,7 +573,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(7);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
 
             }
         }
@@ -552,7 +589,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(9);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
 
             }
         }
@@ -568,7 +605,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(8);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
 
             }
         }
@@ -584,7 +621,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(10);
                 Debug.WriteLine("nb sujets cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -599,7 +636,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(11);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -614,7 +651,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(12);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -629,8 +666,8 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(1);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
-                dessinerTousLesCercles();
+                
+                
             }
         }
 
@@ -645,7 +682,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(14);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -660,7 +697,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(15);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -675,7 +712,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(20);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -690,7 +727,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(19);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -705,7 +742,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(18);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -720,7 +757,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(17);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -735,7 +772,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(16);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -750,7 +787,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(21);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -766,7 +803,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(22);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -781,7 +818,7 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(23);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -796,22 +833,22 @@ namespace TraitementDonneesPFE
             {
                 L_ciblesChecked.Add(24);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
         private void checkBox46_CheckedChanged(object sender, EventArgs e)
         {
-            if (L_ciblesChecked.Contains(25) && !checkBox46.Checked)
+            if (L_ciblesChecked.Contains(13) && !checkBox46.Checked)
             {
-                L_ciblesChecked.Remove(25);
+                L_ciblesChecked.Remove(13);
                 Debug.WriteLine("nb cibles checked : " + L_ciblesChecked.Count());
             }
             else if(checkBox46.Checked)
             {
-                L_ciblesChecked.Add(25);
+                L_ciblesChecked.Add(13);
                 Debug.WriteLine("nb cibles cibles : " + L_ciblesChecked.Count());
-                dessinerTousLesCercles();
+                
             }
         }
 
@@ -924,13 +961,13 @@ namespace TraitementDonneesPFE
             switch (val)
             {
                 case 0: // Sans mouvements
-                    scenarioSelectionne = 0;
-                    break;
-                case 1: // Mouvement avant/arrière
                     scenarioSelectionne = 1;
                     break;
-                case 2: // Mouvements rotations
+                case 1: // Mouvement avant/arrière
                     scenarioSelectionne = 2;
+                    break;
+                case 2: // Mouvements rotations
+                    scenarioSelectionne = 3;
                     break;
                 default:
                     break;
@@ -1196,6 +1233,40 @@ namespace TraitementDonneesPFE
 
         #endregion
 
+        private void dessinerTousLesCercles(object sender, EventArgs e)
+        {
+            int nbAffichage = 0;
+            L_positionsET.Clear();
+
+            foreach (Sujet suj in mesSujets)
+            {
+                if (L_sujetsChecked.Contains(suj.Id))
+                {
+                    foreach (resultat resu in suj.Resultats)
+                    {
+                        if (resu.NumeroScenario == (scenarioSelectionne))
+                        {
+                            foreach (List<double> ldoub in resu.Positions)
+                            {
+
+                                if (L_ciblesChecked.Contains((int)ldoub[0]))
+                                {
+                                    List<int> toAdd = new List<int> { ((int)(ldoub[2] * 0.5625) + 110), ((int)(ldoub[3] * 0.5625) + 61) };
+                                    L_positionsET.Add(toAdd);
+                                    nbAffichage++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            if (L_positionsET != null)
+            {
+                dessinerCercle(L_positionsET);
+            }
+            Debug.WriteLine("Nb positions affichées :" +nbAffichage);
+        }
+
         #endregion
 
 
@@ -1229,6 +1300,10 @@ namespace TraitementDonneesPFE
                     if (line2.StartsWith("T"))
                     {
                         tempoCible = double.Parse(line2.Substring(1, 2));
+                        if (tempoCible == 25)
+                        {
+                            int azazeazeaze = 0;
+                        }
                     }
                     else
                     {
@@ -1240,10 +1315,10 @@ namespace TraitementDonneesPFE
                 }
 
 
-                var reader3 = new StreamReader(File.OpenRead(@dossier + "\\1.txt"), Encoding.Default);
+                var reader3 = new StreamReader(File.OpenRead(@dossier + "\\2.txt"), Encoding.Default);
                 int compteur3 = 0;
 
-                resultat tempoRes2 = new resultat(1);
+                resultat tempoRes2 = new resultat(2);
                 double tempoCible2 = 0;
                 while (!reader3.EndOfStream)
                 {
@@ -1261,16 +1336,16 @@ namespace TraitementDonneesPFE
                     {
                         var values = line3.Split(':');
                         var values2 = values[1].Split(',');
-                        tempoRes2.ajoutCible(tempoCible, double.Parse(values[0].Replace('.', ',')), double.Parse(values2[0]), double.Parse(values2[1].Split(';')[0]));
+                        tempoRes2.ajoutCible(tempoCible2, double.Parse(values[0].Replace('.', ',')), double.Parse(values2[0]), double.Parse(values2[1].Split(';')[0]));
                     }
                     compteur3++;
                 }
 
 
-                var reader4 = new StreamReader(File.OpenRead(@dossier + "\\1.txt"), Encoding.Default);
+                var reader4 = new StreamReader(File.OpenRead(@dossier + "\\3.txt"), Encoding.Default);
                 int compteur4 = 0;
 
-                resultat tempoRes3 = new resultat(1);
+                resultat tempoRes3 = new resultat(3);
                 double tempoCible3 = 0;
                 while (!reader4.EndOfStream)
                 {
@@ -1288,7 +1363,7 @@ namespace TraitementDonneesPFE
                     {
                         var values = line2.Split(':');
                         var values2 = values[1].Split(',');
-                        tempoRes3.ajoutCible(tempoCible, double.Parse(values[0].Replace('.', ',')), double.Parse(values2[0]), double.Parse(values2[1].Split(';')[0]));
+                        tempoRes3.ajoutCible(tempoCible3, double.Parse(values[0].Replace('.', ',')), double.Parse(values2[0]), double.Parse(values2[1].Split(';')[0]));
                     }
                     compteur4++;
                 }
@@ -1320,8 +1395,7 @@ namespace TraitementDonneesPFE
                     int taille = int.Parse(values[10]);
                     int haut_corps = int.Parse(values[11]);
                     int poids = int.Parse(values[12]);
-
-
+                    
                     //On definit les attributs de l'equipier
                     Sujet.Id = id;
                     Sujet.Scenario = scenario;
@@ -1340,7 +1414,6 @@ namespace TraitementDonneesPFE
 
                     //On ajoute à la liste
                     mesSujets.Add(Sujet);
-
                 }
                 else
                 {
@@ -1348,10 +1421,6 @@ namespace TraitementDonneesPFE
                 }
                 compteur++;
             }
-
-
-
-
         }
 
         private void ApplyFilters()
@@ -1514,10 +1583,8 @@ namespace TraitementDonneesPFE
                 }
                 cpt++;
                 #endregion
-
             }
 
-            
             //Enable checkboxes 
             for (int s = 1; s < activerSujets.Length; s++)
             {
@@ -1539,9 +1606,7 @@ namespace TraitementDonneesPFE
                         }
                         */
                     }
-
                 }
-
             }
 
             //Disable all others checkbox
@@ -1557,8 +1622,7 @@ namespace TraitementDonneesPFE
                 }
             }
 
-
-            dessinerTousLesCercles();
+            
 
         }
 
@@ -1573,56 +1637,56 @@ namespace TraitementDonneesPFE
                 return false;
             }
         }
-
-        private void dessinerCercle(int x, int y)
+        
+        private void dessinerCercle(List<List<int>> L)
         {
+            pictureBoxDraw.Image = Image.FromFile("1300x731-Center1080x608.jpg");
             Image i = pictureBoxDraw.Image;
             using (Graphics g = Graphics.FromImage(i))
             {
-                //g.FillEllipse(Brushes.White, new Rectangle(x, y, 2, 2));
-                Pen p = new Pen(Color.Turquoise, 1);
-                Rectangle r = new Rectangle(x, y, 1, 1);
-                g.DrawRectangle(p, r);
-                p.Dispose();
-
-            }
-        }
-
-        private void dessinerTousLesCercles()
-        {
-            int nbAffichage = 0;
-
-            foreach (Sujet suj in mesSujets)
-            {
-                if (L_sujetsChecked.Contains(suj.Id))
+                foreach (List<int> item in L)
                 {
-                    foreach (resultat resu in suj.Resultats)
-                    {
-                        if (resu.NumeroScenario == (scenarioSelectionne+1))
-                        {
-                            foreach (List<double> ldoub in resu.Positions)
-                            {
-
-                                if (L_ciblesChecked.Contains((int)ldoub[0]))
-                                {
-                                    if (true)
-                                    {
-                                        dessinerCercle((int)(ldoub[2] * 0.5625) + 110, (int)(ldoub[3] * 0.5625)  + 61);
-                                        //Debug.WriteLine("tps:"+ldoub[2].ToString()+" : "+ ldoub[2].ToString() + ","+ ldoub[3].ToString());
-                                        nbAffichage++;
-
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    g.FillEllipse(Brushes.White, new Rectangle(item[0], item[1], 2, 2));
+                    
                 }
+
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(72 * 0.5625 + 110), (int)(72 * 0.5625 + 61) , 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(480 * 0.5625 + 110), (int)(72 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(960 * 0.5625 + 110), (int)(72 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(1440 * 0.5625 + 110), (int)(72 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(1848 * 0.5625 + 110), (int)(72 * 0.5625 + 61), 8, 8));
+
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(72 * 0.5625 + 110), (int)(310 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(480 * 0.5625 + 110), (int)(310 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(960 * 0.5625 + 110), (int)(310 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(1440 * 0.5625 + 110), (int)(310 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(1848 * 0.5625 + 110), (int)(310 * 0.5625 + 61), 8, 8));
+
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(72 * 0.5625 + 110), (int)(773 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(480 * 0.5625 + 110), (int)(773 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(960 * 0.5625 + 110), (int)(773 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(1440 * 0.5625 + 110), (int)(773 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(1848 * 0.5625 + 110), (int)(773 * 0.5625 + 61), 8, 8));
+
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(72 * 0.5625 + 110), (int)(1008 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(480 * 0.5625 + 110), (int)(1008 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(960 * 0.5625 + 110), (int)(1008 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(1440 * 0.5625 + 110), (int)(1008 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(1848 * 0.5625 + 110), (int)(1008 * 0.5625 + 61), 8, 8));
+
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(72 * 0.5625 + 110), (int)(540 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(480 * 0.5625 + 110), (int)(540 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(960 * 0.5625 + 110), (int)(540 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(1440 * 0.5625 + 110), (int)(540 * 0.5625 + 61), 8, 8));
+                g.FillEllipse(Brushes.Red, new Rectangle(  (int)(1848 * 0.5625 + 110), (int)(540 * 0.5625 + 61), 8, 8));
+
+
+
+                pictureBoxDraw.Refresh();
             }
-            Debug.WriteLine(nbAffichage);
         }
 
         #endregion
-
 
 
     }
