@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PFE_StabilisationCockpit));
             this.pictureBoxDraw = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -65,11 +66,11 @@
             this.checkBox35 = new System.Windows.Forms.CheckBox();
             this.checkBox36 = new System.Windows.Forms.CheckBox();
             this.checkBox38 = new System.Windows.Forms.CheckBox();
+            this.checkBox44 = new System.Windows.Forms.CheckBox();
             this.checkBox39 = new System.Windows.Forms.CheckBox();
             this.checkBox40 = new System.Windows.Forms.CheckBox();
             this.checkBox41 = new System.Windows.Forms.CheckBox();
             this.checkBox42 = new System.Windows.Forms.CheckBox();
-            this.checkBox44 = new System.Windows.Forms.CheckBox();
             this.checkBox45 = new System.Windows.Forms.CheckBox();
             this.checkBox46 = new System.Windows.Forms.CheckBox();
             this.checkBox47 = new System.Windows.Forms.CheckBox();
@@ -114,6 +115,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxScenario = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.timerCount = new System.Windows.Forms.Timer(this.components);
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.comboBoxSujetTemps = new System.Windows.Forms.ComboBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.comboBoxCibleTemps = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxTime = new System.Windows.Forms.TextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.comboBoxScenarioTemps = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDraw)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -121,13 +134,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox6.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBoxDraw
             // 
             this.pictureBoxDraw.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pictureBoxDraw.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDraw.Image")));
-            this.pictureBoxDraw.Location = new System.Drawing.Point(232, 85);
+            this.pictureBoxDraw.Location = new System.Drawing.Point(275, 115);
             this.pictureBoxDraw.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxDraw.Name = "pictureBoxDraw";
             this.pictureBoxDraw.Size = new System.Drawing.Size(1300, 731);
@@ -163,7 +180,7 @@
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.Tout);
-            this.groupBox1.Location = new System.Drawing.Point(16, 199);
+            this.groupBox1.Location = new System.Drawing.Point(6, 49);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -524,7 +541,7 @@
             this.groupBox2.Controls.Add(this.checkBox59);
             this.groupBox2.Controls.Add(this.checkBox60);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(16, 400);
+            this.groupBox2.Location = new System.Drawing.Point(6, 246);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -605,6 +622,18 @@
             this.checkBox38.UseVisualStyleBackColor = true;
             this.checkBox38.CheckedChanged += new System.EventHandler(this.checkBox38_CheckedChanged);
             // 
+            // checkBox44
+            // 
+            this.checkBox44.AutoSize = true;
+            this.checkBox44.Location = new System.Drawing.Point(118, 129);
+            this.checkBox44.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox44.Name = "checkBox44";
+            this.checkBox44.Size = new System.Drawing.Size(38, 17);
+            this.checkBox44.TabIndex = 1;
+            this.checkBox44.Text = "24";
+            this.checkBox44.UseVisualStyleBackColor = true;
+            this.checkBox44.CheckedChanged += new System.EventHandler(this.checkBox44_CheckedChanged);
+            // 
             // checkBox39
             // 
             this.checkBox39.AutoSize = true;
@@ -652,18 +681,6 @@
             this.checkBox42.Text = "2";
             this.checkBox42.UseVisualStyleBackColor = true;
             this.checkBox42.CheckedChanged += new System.EventHandler(this.checkBox42_CheckedChanged);
-            // 
-            // checkBox44
-            // 
-            this.checkBox44.AutoSize = true;
-            this.checkBox44.Location = new System.Drawing.Point(118, 129);
-            this.checkBox44.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox44.Name = "checkBox44";
-            this.checkBox44.Size = new System.Drawing.Size(38, 17);
-            this.checkBox44.TabIndex = 1;
-            this.checkBox44.Text = "24";
-            this.checkBox44.UseVisualStyleBackColor = true;
-            this.checkBox44.CheckedChanged += new System.EventHandler(this.checkBox44_CheckedChanged);
             // 
             // checkBox45
             // 
@@ -851,11 +868,11 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.pictureBox3);
             this.groupBox3.Controls.Add(this.pictureBox2);
-            this.groupBox3.Location = new System.Drawing.Point(11, 719);
+            this.groupBox3.Location = new System.Drawing.Point(11, 751);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(195, 95);
+            this.groupBox3.Size = new System.Drawing.Size(230, 95);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Légende";
@@ -1215,24 +1232,203 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(27, 593);
+            this.button2.Location = new System.Drawing.Point(11, 663);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 57);
+            this.button2.Size = new System.Drawing.Size(230, 57);
             this.button2.TabIndex = 0;
             this.button2.Text = "Afficher les positions";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.dessinerTousLesCercles);
             // 
+            // timerCount
+            // 
+            this.timerCount.Interval = 10;
+            this.timerCount.Tick += new System.EventHandler(this.timerCount_Tick);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(6, 16);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(93, 28);
+            this.radioButton1.TabIndex = 5;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Globale";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(6, 417);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(147, 28);
+            this.radioButton2.TabIndex = 5;
+            this.radioButton2.Text = "Dans le temps";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.Click += new System.EventHandler(this.radioButton2_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBoxTime);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.groupBox8);
+            this.groupBox4.Controls.Add(this.groupBox7);
+            this.groupBox4.Controls.Add(this.radioButton1);
+            this.groupBox4.Controls.Add(this.groupBox5);
+            this.groupBox4.Controls.Add(this.radioButton2);
+            this.groupBox4.Controls.Add(this.groupBox1);
+            this.groupBox4.Controls.Add(this.groupBox2);
+            this.groupBox4.Location = new System.Drawing.Point(11, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(230, 646);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Type Visualisation";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.comboBoxSujetTemps);
+            this.groupBox5.Location = new System.Drawing.Point(6, 451);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(218, 49);
+            this.groupBox5.TabIndex = 7;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Choix du sujet";
+            // 
+            // comboBoxSujetTemps
+            // 
+            this.comboBoxSujetTemps.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSujetTemps.FormattingEnabled = true;
+            this.comboBoxSujetTemps.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26"});
+            this.comboBoxSujetTemps.Location = new System.Drawing.Point(6, 19);
+            this.comboBoxSujetTemps.Name = "comboBoxSujetTemps";
+            this.comboBoxSujetTemps.Size = new System.Drawing.Size(189, 21);
+            this.comboBoxSujetTemps.TabIndex = 5;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.comboBoxCibleTemps);
+            this.groupBox7.Location = new System.Drawing.Point(6, 506);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(218, 49);
+            this.groupBox7.TabIndex = 7;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Choix de la cible";
+            // 
+            // comboBoxCibleTemps
+            // 
+            this.comboBoxCibleTemps.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCibleTemps.FormattingEnabled = true;
+            this.comboBoxCibleTemps.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25"});
+            this.comboBoxCibleTemps.Location = new System.Drawing.Point(6, 19);
+            this.comboBoxCibleTemps.Name = "comboBoxCibleTemps";
+            this.comboBoxCibleTemps.Size = new System.Drawing.Size(189, 21);
+            this.comboBoxCibleTemps.TabIndex = 5;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(11, 617);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(39, 13);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Temps";
+            // 
+            // textBoxTime
+            // 
+            this.textBoxTime.Location = new System.Drawing.Point(56, 614);
+            this.textBoxTime.Name = "textBoxTime";
+            this.textBoxTime.ReadOnly = true;
+            this.textBoxTime.Size = new System.Drawing.Size(65, 20);
+            this.textBoxTime.TabIndex = 7;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.comboBoxScenarioTemps);
+            this.groupBox8.Location = new System.Drawing.Point(6, 561);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(218, 49);
+            this.groupBox8.TabIndex = 7;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Choix du scénario";
+            // 
+            // comboBoxScenarioTemps
+            // 
+            this.comboBoxScenarioTemps.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxScenarioTemps.FormattingEnabled = true;
+            this.comboBoxScenarioTemps.Items.AddRange(new object[] {
+            "Sans mouvements",
+            "Mouvements Avant/Arrière",
+            "Mouvements petites rotations"});
+            this.comboBoxScenarioTemps.Location = new System.Drawing.Point(6, 19);
+            this.comboBoxScenarioTemps.Name = "comboBoxScenarioTemps";
+            this.comboBoxScenarioTemps.Size = new System.Drawing.Size(189, 21);
+            this.comboBoxScenarioTemps.TabIndex = 5;
+            // 
             // PFE_StabilisationCockpit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1548, 825);
+            this.ClientSize = new System.Drawing.Size(1610, 860);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBoxDraw);
             this.Controls.Add(this.button2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1254,6 +1450,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1345,6 +1546,18 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBoxSexe;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Timer timerCount;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.ComboBox comboBoxCibleTemps;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox comboBoxSujetTemps;
+        private System.Windows.Forms.TextBox textBoxTime;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.ComboBox comboBoxScenarioTemps;
     }
 }
 

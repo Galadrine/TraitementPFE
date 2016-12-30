@@ -18,20 +18,21 @@ namespace TraitementDonneesPFE
     public partial class PFE_StabilisationCockpit : Form
     {
 
-        #region Attributs
+        #region -- Attributs --
 
         private static List<Sujet> mesSujets = new List<Sujet>();
         private static List<int> L_sujetsChecked = new List<int>();
         private static List<int> L_ciblesChecked = new List<int>();
         private static List<CheckBox> L_checkBox_sujets = new List<CheckBox>();
         private List<List<int>> L_positionsET = new List<List<int>>();
+        private List<List<double>> L_positionsET2 = new List<List<double>>();
         private int acuiteSelectionne =0, correctionSelectionne = 0, couleurYeuxSelectionne = 0, mainSelectionne = 0,
             oeilSelectionne = 0, ordreScenarioSelectionne = 0, sexeSelectionne = 0, scenarioSelectionne = 0;
         private string poidsSelectionne = "", tailleSelectionne = "", tailleHautSelectionne = "";
         bool[] activerSujets = new bool[28];
-        
-        #endregion
+        private double counterTime = 0f;
 
+        #endregion
 
         public PFE_StabilisationCockpit()
         {
@@ -48,7 +49,6 @@ namespace TraitementDonneesPFE
             comboBoxTaille.SelectedIndex = 0;
             comboBoxTailleHaut.SelectedIndex = 0;
             comboBoxSexe.SelectedIndex = 0;
-
 
             Image i = pictureBoxDraw.Image;
             using (Graphics g = Graphics.FromImage(i))
@@ -86,11 +86,27 @@ namespace TraitementDonneesPFE
                 pictureBoxDraw.Refresh();
             }
 
+            comboBoxSujetTemps.SelectedIndex = 0;
+            comboBoxCibleTemps.SelectedIndex = 0;
+            comboBoxScenarioTemps.SelectedIndex = 0;
+
+            foreach (Control c in groupBox5.Controls)
+            {
+                c.Enabled = false;
+            }
+            foreach (Control c in groupBox8.Controls)
+            {
+                c.Enabled = false;
+            }
+            foreach (Control c in groupBox7.Controls)
+            {
+                c.Enabled = false;
+            }
+            textBoxTime.Enabled = false;
 
         }
 
-
-        #region Fonctions Evenements
+        #region -- Fonctions Evenements --
 
         #region selection checkbox sujets
 
@@ -854,11 +870,6 @@ namespace TraitementDonneesPFE
 
         #endregion
 
-        /// <summary>
-        /// Fonction btn "tout" sujet
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void TousSujets_Click(object sender, EventArgs e)
         {
             int cpt1 = 0;
@@ -912,11 +923,6 @@ namespace TraitementDonneesPFE
 
         }
 
-        /// <summary>
-        /// Fonction btn "toutes" cibles
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void ToutesCibles_Click(object sender, EventArgs e)
         {
             int cpt1 = 0;
@@ -1235,46 +1241,163 @@ namespace TraitementDonneesPFE
 
         private void dessinerTousLesCercles(object sender, EventArgs e)
         {
-            int nbAffichage = 0;
-            L_positionsET.Clear();
-
-            foreach (Sujet suj in mesSujets)
+            if (radioButton1.Checked == true)
             {
-                if (L_sujetsChecked.Contains(suj.Id))
-                {
-                    foreach (resultat resu in suj.Resultats)
-                    {
-                        if (resu.NumeroScenario == (scenarioSelectionne))
-                        {
-                            foreach (List<double> ldoub in resu.Positions)
-                            {
+                int nbAffichage = 0;
+                L_positionsET.Clear();
 
-                                if (L_ciblesChecked.Contains((int)ldoub[0]))
+                foreach (Sujet suj in mesSujets)
+                {
+                    if (L_sujetsChecked.Contains(suj.Id))
+                    {
+                        foreach (resultat resu in suj.Resultats)
+                        {
+                            if (resu.NumeroScenario == (scenarioSelectionne))
+                            {
+                                foreach (List<double> ldoub in resu.Positions)
                                 {
-                                    List<int> toAdd = new List<int> { ((int)(ldoub[2] * 0.5625) + 110), ((int)(ldoub[3] * 0.5625) + 61) };
-                                    L_positionsET.Add(toAdd);
-                                    nbAffichage++;
+
+                                    if (L_ciblesChecked.Contains((int)ldoub[0]))
+                                    {
+                                        List<int> toAdd = new List<int> { ((int)(ldoub[2] * 0.5625) + 110), ((int)(ldoub[3] * 0.5625) + 61) };
+                                        L_positionsET.Add(toAdd);
+                                        nbAffichage++;
+                                    }
                                 }
                             }
                         }
                     }
                 }
+                if (L_positionsET != null)
+                {
+                    dessinerCercle(L_positionsET,2);
+                }
+                Debug.WriteLine("Nb positions affichées :" + nbAffichage);
             }
-            if (L_positionsET != null)
+            else if (radioButton2.Checked == true)
             {
-                dessinerCercle(L_positionsET);
+                timerCount.Stop();
+                timerCount.Start();
+                counterTime = 0;
+                L_positionsET2.Clear();
+                textBoxTime.Enabled = true;
+
+                Debug.WriteLine("sujet : " +comboBoxSujetTemps.SelectedItem);
+
+                double aEnlever = 0;
+
+                foreach (Sujet suj in mesSujets)
+                {
+                    if (suj.Id == int.Parse(comboBoxSujetTemps.SelectedItem.ToString()))
+                    {
+                        foreach (resultat res in suj.Resultats)
+                        {
+                            if (res.NumeroScenario == int.Parse((comboBoxScenarioTemps.SelectedIndex + 1).ToString()))
+                            {
+                                foreach (List<double> dou in res.Positions)
+                                {
+                                    //numCible,temps, posX, posY
+                                    if (dou[0]== int.Parse(comboBoxCibleTemps.SelectedItem.ToString()))
+                                    {
+                                        if (aEnlever == 0)
+                                        {
+                                            aEnlever = Math.Floor(dou[1]);
+                                        }
+                                        List<double> toAdd = new List<double> { dou[1] - aEnlever, dou[2] * 0.5625f + 110f, dou[3] * 0.5625f + 61f };
+                                        L_positionsET2.Add(toAdd);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
             }
-            Debug.WriteLine("Nb positions affichées :" +nbAffichage);
+
         }
+
+        private void radioButton1_Click(object sender, EventArgs e)
+        {
+            timerCount.Stop();
+            counterTime = 0;
+            textBoxTime.Text = "";
+            foreach (Control c in groupBox1.Controls)
+            {
+                c.Enabled = true;
+            }
+            foreach (Control c in groupBox2.Controls)
+            {
+                c.Enabled = true;
+            }
+            foreach (Control c in groupBox5.Controls)
+            {
+                c.Enabled = false;
+            }
+            foreach (Control c in groupBox7.Controls)
+            {
+                c.Enabled = false;
+            }
+            foreach (Control c in groupBox8.Controls)
+            {
+                c.Enabled = false;
+            }
+            textBoxTime.Enabled = false;
+        }
+
+        private void radioButton2_Click(object sender, EventArgs e)
+        {
+
+            foreach (Control c in groupBox1.Controls)
+            {
+                c.Enabled = false;
+            }
+            foreach (Control c in groupBox2.Controls)
+            {
+                c.Enabled = false;
+            }
+            foreach (Control c in groupBox5.Controls)
+            {
+                c.Enabled = true;
+            }
+            foreach (Control c in groupBox7.Controls)
+            {
+                c.Enabled = true;
+            }
+            foreach (Control c in groupBox8.Controls)
+            {
+                c.Enabled = true;
+            }
+
+        }
+
+        private void timerCount_Tick(object sender, EventArgs e)
+        {
+            if (L_positionsET2.Count()>1)
+            {
+                counterTime = counterTime + 0.1f;
+                textBoxTime.Text = (counterTime / 10).ToString();
+
+                double toCompare = Math.Round(counterTime / 10, 2);
+                double toCompare2 = Math.Round(L_positionsET2[0][0], 2);
+                if (toCompare2 == toCompare)
+                {
+                    List<List<int>> aze = new List<List<int>>();
+                    List<int> toAdd = new List<int> { (int)(L_positionsET2[0][1]), (int)(L_positionsET2[0][2]) };
+                    aze.Add(toAdd);
+                    dessinerCercle(aze,10);
+                    L_positionsET2.RemoveAt(0);
+                }
+            }
+
+        }
+
 
         #endregion
 
+        #region -- Fonctions --
 
-        #region Fonctions
-
-        /// <summary>
-        /// Fonction read file csv sujet
-        /// </summary>
         private void readfile()
         {
             List<List<resultat>> aAjouter = new List<List<resultat>>();
@@ -1638,7 +1761,7 @@ namespace TraitementDonneesPFE
             }
         }
         
-        private void dessinerCercle(List<List<int>> L)
+        private void dessinerCercle(List<List<int>> L, int taille)
         {
             pictureBoxDraw.Image = Image.FromFile("1300x731-Center1080x608.jpg");
             Image i = pictureBoxDraw.Image;
@@ -1646,7 +1769,7 @@ namespace TraitementDonneesPFE
             {
                 foreach (List<int> item in L)
                 {
-                    g.FillEllipse(Brushes.White, new Rectangle(item[0], item[1], 2, 2));
+                    g.FillEllipse(Brushes.White, new Rectangle(item[0], item[1], taille, taille));
                     
                 }
 
